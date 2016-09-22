@@ -1,0 +1,66 @@
+﻿@using MaksimHladki.Web.Infrastructure
+@model MaksimHladki.Web.ViewModel.DrugUnitAssignViewModel
+@{
+    ViewBag.Title = "AssignToDepot";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header>
+    <h2>Assign Drug Unit To Depot</h2>
+</header>
+
+<main>
+    <pre>
+    <code>
+Create a page where drug units can be associated/disassociated from a depot
+      </code>
+    </pre>
+
+    <section>
+
+        @using (Html.BeginForm("AssignToDepot", "DrugUnit", FormMethod.Post, new { @id = "form-assign-drugunit" }))
+        {
+            for (var i = 0; i < Model.Depots.Count; i++)
+            {
+                @Html.HiddenFor(m => Model.Depots[i].Text)
+                @Html.HiddenFor(m => Model.Depots[i].Value)
+            }
+
+            <input type="submit" class="btn btn-primary" value="Save" />
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Pick Number</th>
+                        <th>Depot</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (var i = 0; i < Model.DrugUnits.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                @Model.DrugUnits[i].Id
+                                @Html.HiddenFor(m => Model.DrugUnits[i].Id)
+                            </td>
+                            <td>
+                                @Model.DrugUnits[i].DrugType.Name
+                                @Html.HiddenFor(m => Model.DrugUnits[i].DrugType.Name)
+                            </td>
+                            <td>
+                                @Model.DrugUnits[i].PickNumber
+                                @Html.HiddenFor(m => Model.DrugUnits[i].PickNumber)
+                            </td>
+                            <td>
+                                @Html.DropDownListFor(m => m.DrugUnits[i].DepotId, Model.Depots.SelectValue(Model.DrugUnits[i].DepotId?.ToString() ?? ""), "Choose", new { @class = "form-control" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+
+    </section>
+</main>

@@ -1,0 +1,12 @@
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.BusinessLayer\bin\Release\MaksimHladki.BusinessLayer.dll.config
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.BusinessLayer\bin\Release\MaksimHladki.BusinessLayer.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.BusinessLayer\bin\Release\MaksimHladki.BusinessLayer.pdb
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.BusinessLayer\bin\Release\EntityFramework.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.BusinessLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.BusinessLayer\bin\Release\MaksimHladki.DAL.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.BusinessLayer\bin\Release\MaksimHladki.DAL.pdb
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.BusinessLayer\bin\Release\EntityFramework.xml
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.BusinessLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.BusinessLayer\obj\Release\MaksimHladki.BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.BusinessLayer\obj\Release\MaksimHladki.BusinessLayer.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.BusinessLayer\obj\Release\MaksimHladki.BusinessLayer.pdb

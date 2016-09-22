@@ -1,0 +1,55 @@
+﻿@model MaksimHladki.Web.ViewModel.DepotListViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header>
+    <h2>Depot list</h2>
+</header>
+
+<main>
+    <pre>
+        <code>
+ Create a web page in the application that displays each depot and all the drug units from that depot. The columns that you should display in the table are Depot Name, Country Name, Drug Type Name, Drug Unit Id and Pick Number. Please display the depots even if they don’t have any drug unit associated. In that case you can display the null fields (the drug related fields) however you like (null, empty etc).
+        </code>
+    </pre>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Depot Name</th>
+            <th>Country Name</th>
+            <th>Drug Type Name</th>
+            <th>Drug Unit Id</th>
+            <th>Pick Number</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var group in Model.Groups)
+        {
+            if (group.DrugUnits.Count > 0)
+            {
+                foreach (var drugUnit in group.DrugUnits)
+                {
+                    <tr>
+                        <td>@group.Depot.Name</td>
+                        <td>@group.Depot.Country</td>
+                        <td>@drugUnit.DrugType.Name</td>
+                        <td>@drugUnit.Id</td>
+                        <td>@drugUnit.PickNumber</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td>@group.Depot.Name</td>
+                    <td>@group.Depot.Country</td>
+                    <td colspan="3" class="no-drug-unit">No Drug unit data</td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table>
+</main>

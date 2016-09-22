@@ -1,0 +1,63 @@
+﻿body {
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+/* Set padding to keep content from hitting the edges */
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Styles for validation helpers*/
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000 !important;
+    background-color: #ffeeee !important;
+}
+
+.validation-summary-errors {
+    font-weight: bold !important;
+    color: #ff0000 !important;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+.no-drug-unit {
+    text-align: center;
+}
+
+#form-assign-drugunit input[type="submit"] {
+    margin-bottom: 20px;
+}
+
+.alert {
+    margin: 20px auto;
+}

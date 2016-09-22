@@ -1,0 +1,8 @@
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\DAL\bin\Debug\DAL.dll.config
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\DAL\bin\Debug\DAL.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\DAL\bin\Debug\DAL.pdb
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\DAL\bin\Debug\EntityFramework.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\DAL\bin\Debug\EntityFramework.xml
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\DAL\obj\Debug\DAL.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\DAL\obj\Debug\DAL.pdb
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

@@ -1,0 +1,9 @@
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\BL\bin\Debug\BL.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\BL\bin\Debug\BL.pdb
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\BL\bin\Debug\DAL.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\BL\bin\Debug\EntityFramework.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\BL\bin\Debug\DAL.pdb
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\BL\bin\Debug\EntityFramework.xml
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\BL\obj\Debug\BL.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\BL\obj\Debug\BL.pdb

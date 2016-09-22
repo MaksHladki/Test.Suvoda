@@ -1,0 +1,94 @@
+﻿@model MaksimHladki.Web.ViewModel.DepotCalculateDrugUnitsViewModel
+@{
+    ViewBag.Title = "CalculateDrugUnit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header>
+    <h2>Calculate Drug Units</h2>
+</header>
+
+<main>
+
+    <pre>
+    <code>
+Create a page where you can select a depot and enter for each drug type the number of drug units wanted and then calculate which drug units would be picked for sending from the depot
+        </code>
+    </pre>
+
+    <section>
+        @using (Html.BeginForm("CalculateDrugUnit", "Depot"))
+        {
+            @Html.ValidationSummary(true)
+            for (var i = 0; i < Model.Depots.Count; i++)
+            {
+                @Html.HiddenFor(m => Model.Depots[i].Text)
+                @Html.HiddenFor(m => Model.Depots[i].Value)
+            }
+
+            <div class="form-group">
+                <label>Depot</label>
+                @Html.DropDownListFor(m => m.SelectedDepotId, Model.Depots, "Choose", new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.SelectedDepotId)
+            </div>
+
+            <div class="form-group">
+                <label>Drug Types</label>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Count</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @for (var i = 0; i < @Model.DrugTypes.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                @Html.HiddenFor(m => @Model.DrugTypes[i].Name)
+                                @Html.HiddenFor(m => @Model.DrugTypes[i].Id)
+                                @Model.DrugTypes[i].Name
+                            </td>
+                            <td>
+                                @Html.TextBoxFor(m => Model.DrugTypes[i].Count, new {@class = "form-control"})
+                                @Html.ValidationMessageFor(m => Model.DrugTypes[i].Count)
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+
+            <input type="submit" value="Calculate" class="btn btn-primary"/>
+        }
+
+    </section>
+
+    @if (Model.DrugUnits != null && Model.DrugUnits.Any())
+    {
+        <section>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Drug Unit Id</th>
+                    <th>Type</th>
+                    <th>Number</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var drugUnit in Model.DrugUnits)
+                {
+                    <tr>
+                        <td>@drugUnit.Id</td>
+                        <td>@drugUnit.DrugType.Name</td>
+                        <td>@drugUnit.PickNumber</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </section>
+    }
+
+
+</main>

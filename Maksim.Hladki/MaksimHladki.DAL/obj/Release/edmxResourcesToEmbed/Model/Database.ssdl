@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Depot">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="CountryId" Type="nvarchar" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DrugType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DrugUnit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="PickNumber" Type="int" Nullable="false" />
+    <Property Name="DrugTypeId" Type="int" Nullable="false" />
+    <Property Name="DepotId" Type="int" />
+  </EntityType>
+  <Association Name="FK_Depot_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="Depot" Type="Self.Depot" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Depot">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DrugUnit_Depot">
+    <End Role="Depot" Type="Self.Depot" Multiplicity="0..1" />
+    <End Role="DrugUnit" Type="Self.DrugUnit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Depot">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DrugUnit">
+        <PropertyRef Name="DepotId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DrugUnit_DrugType">
+    <End Role="DrugType" Type="Self.DrugType" Multiplicity="1" />
+    <End Role="DrugUnit" Type="Self.DrugUnit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DrugType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DrugUnit">
+        <PropertyRef Name="DrugTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DbModelStoreContainer">
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Depot" EntityType="Self.Depot" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DrugType" EntityType="Self.DrugType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DrugUnit" EntityType="Self.DrugUnit" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Depot_Country" Association="Self.FK_Depot_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Depot" EntitySet="Depot" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DrugUnit_Depot" Association="Self.FK_DrugUnit_Depot">
+      <End Role="Depot" EntitySet="Depot" />
+      <End Role="DrugUnit" EntitySet="DrugUnit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DrugUnit_DrugType" Association="Self.FK_DrugUnit_DrugType">
+      <End Role="DrugType" EntitySet="DrugType" />
+      <End Role="DrugUnit" EntitySet="DrugUnit" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

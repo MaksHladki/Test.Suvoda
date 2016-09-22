@@ -1,0 +1,7 @@
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.DAL\bin\Release\MaksimHladki.DAL.dll.config
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.DAL\bin\Release\MaksimHladki.DAL.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.DAL\bin\Release\MaksimHladki.DAL.pdb
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.DAL\bin\Release\EntityFramework.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.DAL\bin\Release\EntityFramework.xml
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.DAL\obj\Release\MaksimHladki.DAL.dll
+C:\Users\maksim.hladki\Documents\Visual Studio 2015\Projects\Maksim.Hladki\MaksimHladki.DAL\obj\Release\MaksimHladki.DAL.pdb
